@@ -3,6 +3,15 @@ This pasckage shows an integration of opencv (cv_bridge) with ROS 2 ,also face-d
 # OPENCV ROS2 (FACE DETECTION).
 
 This package helps you integrating Open-cv with ROS 2 and also face-detection.
+Install all dependecies:
+```
+   sudo apt install ros-<ros2-distro>-cv-bridge
+```  
+using the pip command:
+```
+   pip install opencv-python
+```
+NOTE: python3 has to be installed before this nodes can work.
 
 To run this Node.
 
@@ -22,3 +31,5 @@ You will see as Video displayed below:
 
   
 [Screencast from 03-16-2023 12:54:55 AM.webm](https://user-images.githubusercontent.com/97457075/225474915-bcefc1c0-0e42-40a6-988c-16b32089fa94.webm)
+
+You can integrate this package in simulation and also can be used in a pysical robot with Opencv.
