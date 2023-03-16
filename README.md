@@ -2,7 +2,7 @@
 This package shows an integration of opencv (cv_bridge) with ROS 2 ,also face-dectection using ROS 2.
 # OPENCV ROS2 (FACE DETECTION).
 
-This package helps you integrating Open-cv with ROS 2 and also face-detection.
+This package helps you integrate Opencv with ROS 2 and also face-detection.
 Install all dependecies:
 ```
    sudo apt install ros-<ros2-distro>-cv-bridge
