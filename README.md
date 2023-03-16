@@ -1,3 +1,24 @@
 # Integrating-Open-cv-with-ROS-2
 This pasckage shows an integration of opencv (cv_bridge) with ROS 2 ,also face-dectection using ROS 2.
-# OPENCV ROS2 (FACE DETECTION)
+# OPENCV ROS2 (FACE DETECTION).
+
+This package helps you integrating Open-cv with ROS 2 and also face-detection.
+
+To run this Node.
+
+Create a workspace and clone the package into your src folder.
+
+Then:
+```
+   ros2 run ros2_cv face_detection 
+```
+
+Open rviz and visualize the image from your webcam.
+```
+   ros2 run rviz2 rviz2 
+```  
+set the image topic to "/webcam" 
+You will see as Video displayed below:
+
+  
+[Screencast from 03-16-2023 12:54:55 AM.webm](https://user-images.githubusercontent.com/97457075/225474915-bcefc1c0-0e42-40a6-988c-16b32089fa94.webm)
