@@ -1,5 +1,5 @@
 # Integrating-Open-cv-with-ROS-2
-This pasckage shows an integration of opencv (cv_bridge) with ROS 2 ,also face-dectection using ROS 2.
+This package shows an integration of opencv (cv_bridge) with ROS 2 ,also face-dectection using ROS 2.
 # OPENCV ROS2 (FACE DETECTION).
 
 This package helps you integrating Open-cv with ROS 2 and also face-detection.
