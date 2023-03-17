@@ -22,6 +22,7 @@ setup(
         'console_scripts': [
         'face_detection=ros2_cv.face_detection:main',
         'integration=ros2_cv.open_cv_integration:main',
+        'follow_me=ros2_cv.follow_me:main',
         ],
     },
 )
