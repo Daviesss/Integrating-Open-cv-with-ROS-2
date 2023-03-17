@@ -12,7 +12,7 @@ class program(Node):
     def __init__(self):
         super().__init__('face_detection')
         self.pub_camera = self.create_publisher(Image,'/webcam',100) #publish the camera image data to the topic(Note:Make sure the topic name is not the same as your robot topic , so you can use the webcam)
-        self.pub_cmd = self.create_publisher(Twist,'/cmd_vel',100) #publishing to command veloaicty,to drive the robot.
+        self.pub_cmd = self.create_publisher(Twist,'/cmd_vel',100) #publishing to command velocity,to drive the robot.
         self.velocity_message = Twist()
         self.image = cv2.VideoCapture(0) #reading from the webcam.
         self.face_cascade = cv2.CascadeClassifier('/home/magnum/opencv_ws/src/ros2_cv/ros2_cv/facedetection.xml') #Add the path to your open_cv face detection.xml classifier.
