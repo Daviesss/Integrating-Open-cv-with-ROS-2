@@ -25,10 +25,10 @@ class program(Node):
         #print("The image of the camera is reading")
          
         
-        # reading =self.face_cascade.detectMultiScale(frame)
+        #reading =self.face_cascade.detectMultiScale(frame)
         while True:
             __ret,frame = self.image.read()
-            reading =self.face_cascade.detectMultiScale(frame)
+            reading =self.face_cascade.detectMultiScale()
             for (x,y,w,h) in reading:
                 cv2.rectangle(frame,(x,y),(x+w,y+h),(255,0,0),2)
             cv2.imshow("frame",frame)

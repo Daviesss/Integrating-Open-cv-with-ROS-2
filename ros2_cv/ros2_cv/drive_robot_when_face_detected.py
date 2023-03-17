@@ -12,8 +12,8 @@ class program(Node):
     def __init__(self):
         super().__init__('face_detection')
         self.pub_camera = self.create_publisher(Image,'/webcam',100) #publish the camera image data to the topic(Note:Make sure the topic name is not the same as your robot topic , so you can use the webcam)
-        #self.pub_cmd = self.create_publisher(Twist,'/cmd_vel',100) #publishing to command veloaicty,to drive the robot.
-        #self.velocity_message = Twist()
+        self.pub_cmd = self.create_publisher(Twist,'/cmd_vel',100) #publishing to command veloaicty,to drive the robot.
+        self.velocity_message = Twist()
         self.image = cv2.VideoCapture(0) #reading from the webcam.
         self.face_cascade = cv2.CascadeClassifier('/home/magnum/opencv_ws/src/ros2_cv/ros2_cv/facedetection.xml') #Add the path to your open_cv face detection.xml classifier.
         print(self.image.isOpened())
@@ -31,13 +31,13 @@ class program(Node):
             reading =self.face_cascade.detectMultiScale(frame)
             for (x,y,w,h) in reading:
                 cv2.rectangle(frame,(x,y),(x+w,y+h),(255,0,0),2)
-            print(frame[0]) #print the co-ordinates to the terminal.
-            # if frame.any():
-            #     self.velocity_message.linear.x = 0.2
-            #     self.pub_cmd.publish(self.velocity_message)
-            # else:
-            #     self.velocity_message.linear.x = 0.0
-            #     self.pub_cmd.publish(self.velocity_message)
+            print(frame[0])
+            if frame.any():
+                self.velocity_message.linear.x = 0.2
+                self.pub_cmd.publish(self.velocity_message)
+            else:
+                self.velocity_message.linear.x = 0.0
+                self.pub_cmd.publish(self.velocity_message)
 
 
             cv2.imshow("frame",frame)
